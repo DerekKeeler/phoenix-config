@@ -13,12 +13,12 @@ require('window-selector.js');
 
 /* Window handling prefix key */
 
-var wPrefix = new MoveWindowPrefixKey('space', ['ctrl', 'alt', 'cmd'],
-    "h/l - Left/Right Half\nn - Centered Half Width\nc - Center\ng - Wide Center\nm - Max\no/p - big left/right\nO/P - medium left/right\n1/2 - top left/right\n3/4 - bottom left/right\ns - next screen\nr - reload\nesc - Abort");
-wPrefix.addSuffix('h', [], function () {
+var wPrefix = new MoveWindowPrefixKey('space', ['cmd', 'ctrl'],
+    "left/right - Left/Right Half\nn - Centered Half Width\nc - Center\ng - Wide Center\nm - Max\no/p - big left/right\nO/P - medium left/right\n1/2 - top left/right\n3/4 - bottom left/right\ns - next screen\nr - reload\nesc - Abort");
+wPrefix.addSuffix('left', [], function () {
     wPrefix.moveWindow({x: 0, y: 0, width: 0.5, height: 1.0});
 });
-wPrefix.addSuffix('l', [], function () {
+wPrefix.addSuffix('right', [], function () {
     wPrefix.moveWindow({x: 0.5, y: 0, width: 0.5, height: 1.0});
 });
 wPrefix.addSuffix('n', [], function () {
